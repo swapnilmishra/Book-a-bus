@@ -1,0 +1,74 @@
+<% include header %>
+	<style type="text/css">
+		@media print{
+			.dl-horizontal{
+				border-top: 1px solid;
+			}
+		}
+	</style>
+	<div class="well">
+		<div class="row">
+			<div class="col-xs-6">
+				<div class="center-block travels-address">
+					<address>
+					  <strong>Shatabdi Travels</strong><br>
+					  Kampoo Road, Lashkar, Gwalior(M.P)<br>
+					  Phone: 0751-2321943/2410420<br>
+					</address>
+				</div>
+				<dl class="dl-horizontal">
+					<dt>Booking id</dt>
+				  <dd><%=bookingId%></dd>
+					<dt>Date of journey</dt>
+				  <dd><%=dateOfJourney.toDateString()%></dd>
+				  <dt>Bus number</dt>
+				  <dd><%=busNumber%></dd>
+				  <dt>Seats</dt>
+				  <dd><%=seats%></dd>
+				  <dt>Name</dt>
+				  <dd><%=customerName%></dd>
+				  <dt>Departure time</dt>
+				  <dd><%=departureTime%></dd>
+				  <dt>Date of booking</dt>
+				  <dd><%=bookingDate.toDateString()%></dd>
+				  <dt>Amount</dt>
+				  <dd><%=amount%> Rs.</dd>
+				</dl>
+				<div class="center-block travels-address">
+					<address>
+					  <strong>Kanpur Office : </strong><br>
+					  Hotel Khanjan, Fazal Ganj Chouraha, Kanpur(U.P)<br>
+					  Phone: 0512-3073168/3073449<br>
+					</address>
+				</div>
+			</div>
+			<div class="col-xs-6">
+				<div class="center-block travels-address">
+					<address>
+					  <strong>Shatabdi Travels</strong><br>
+					  Kampoo Road, Lashkar, Gwalior(M.P)<br>
+					  Phone: 0751-2321943/2410420<br>
+					</address>
+				</div>
+				<dl class="dl-horizontal">
+					<dt>Booking id</dt>
+				  <dd><%=bookingId%></dd>
+					<dt>Date of journey</dt>
+				  <dd><%=dateOfJourney.toDateString()%></dd>
+				  <dt>Bus number</dt>
+				  <dd><%=busNumber%></dd>
+				  <dt>Seats</dt>
+				  <dd><%=seats%></dd>
+				  <dt>Name</dt>
+				  <dd><%=customerName%></dd>
+				  <dt>Departure time</dt>
+				  <dd><%=departureTime%></dd>
+				</dl>
+			</div>
+		</div>
+		<div style="padding-bottom:20px" class="button-print">
+			<button class="btn btn-primary btn-lg pull-right" onclick="window.print()">Print</button>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+<% include footer %>

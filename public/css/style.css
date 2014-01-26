@@ -1,0 +1,105 @@
+.navbar-brand{
+    color: #fff !important;
+}
+dl{
+    margin-top: 0;
+}
+.booking-tab{
+    margin-bottom: 20px;
+}
+.seats-container {
+    border: 1px solid #bbb;
+    border-radius : 3px;
+    /*padding-top: 20px;*/
+    padding: 10px;
+}
+.seats-container .seats:last-of-type{
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+.seats > .seat{
+    margin-left: 10px; 
+}
+.seats > .seat:first-child{
+    margin-left: 0; 
+}
+.seat{
+    border: 1px solid #bbb;
+    border-radius : 5px;
+    background-color: #F1F1F1;    
+}
+
+.seat > a {
+    color: #333;
+}
+.seats > .sleeper{
+    width: 50px;
+}
+.seats > .seat a{
+    display: block;
+}
+.seat:hover{
+    cursor: pointer;
+}
+.seat .glyphicon{
+    /*font-size: 20px;*/
+}
+.seats-back{
+    margin-left: -60px;
+}
+.seats-back .seat{
+    margin-bottom: 2px;
+    padding-right: 5px;
+    padding-left: 5px;
+    display: block;
+    width: 26px;
+}
+.seat-selected{
+    background-color: #00B800;
+}
+.seat-booked{
+    background-color: #F05B5B;
+}
+.icon-driver{
+    margin-top: 65px;
+    font-size: 30px;
+    color: #bbb;
+}
+.arrow-driver{
+    margin-top: 10px;
+    font-size: 20px;
+    color: #bbb;
+}
+.booking-form{
+    background-color: #fff;
+    border: 1px solid #ddd;    
+    border-radius: 4px 4px 0 0;
+    padding: 15px 15px 15px;
+}
+.booking-form form {
+    margin-top: 20px;
+}
+.booking-form div[class*="col-"]{
+    margin-top: 10px;
+}
+
+@media print{
+    .loading-btn,.remove-btn {
+        display: none;
+    }
+    .button-print{
+        display: none;
+    }
+    .travels-address{
+        border-top: 1px solid gray;
+    }
+}
+
+.form-date {
+    max-width: 400px;
+    padding: 15px;
+    margin: 0 auto;
+}
+.form-date > h2,.form-date input,.form-date button, .form-date select{
+    margin-bottom: 15px;
+}

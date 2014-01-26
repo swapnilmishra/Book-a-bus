@@ -1,0 +1,92 @@
+<% include header %>
+	<style type="text/css">
+		@media print{
+			.dl-horizontal{
+				border-top: 1px solid;
+			}
+			.well{
+				padding: 0px;
+				padding-left: 10px;
+				padding-right: 10px;
+			}
+		}
+	</style>
+	<div class="well">
+		<div class="row">
+			<div class="col-md-12">
+				<h4>Customer Copy</h4>
+				<div class="row">
+					<div class="col-xs-6">
+						<dl class="dl-horizontal">
+							<dt>Delivery From</dt>
+						  <dd><%=fromName%></dd>
+						  <dt>Delivery To</dt>
+						  <dd><%=toName%></dd>
+						  <dt>Station</dt>
+						  <dd><%=station%></dd>
+						  <dt>Parcel</dt>
+						  <dd><%=parcel%></dd>
+						  <dt>Booking date</dt>
+						  <dd><%=bookingDate.toDateString()%></dd>
+						  <dt>Charges</dt>
+						  <dd><%=transportCharges%> Rs.</dd>
+						</dl>
+					</div>
+					<div class="col-xs-6">
+						<div class="center-block travels-address">
+							<address>
+							  <strong>Shatabdi Travels</strong><br>
+							  Kampoo Road, Lashkar, Gwalior(M.P)<br>
+							  Phone: 0751-2321943/2410420<br>
+							</address>
+						</div>
+						<div class="center-block travels-address">
+							<address>
+							  <strong>Kanpur Office : </strong><br>
+								Hotel Khanjan, Fazal Ganj Chouraha, Kanpur(U.P) <br>
+								Phone: 0512-3073168/3073449
+							</address>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-md-12">
+				<h4>Merchant Copy</h4>
+				<div class="row">
+					<div class="col-xs-6">
+						<dl class="dl-horizontal">
+							<dt>Delivery From</dt>
+						  <dd><%=fromName%></dd>
+						  <dt>Delivery To</dt>
+						  <dd><%=toName%></dd>
+						  <dt>Station</dt>
+						  <dd><%=station%></dd>
+						  <dt>Parcel</dt>
+						  <dd><%=parcel%></dd>
+						  <dt>Booking date</dt>
+						  <dd><%=bookingDate.toDateString()%></dd>
+						  <dt>Charges</dt>
+						  <dd><%=transportCharges%> Rs.</dd>
+						</dl>
+					</div>
+					<div class="col-xs-6">
+						<div class="center-block travels-address">
+							<address>
+							  <strong>Shatabdi Travels</strong><br>
+							  Kampoo Road, Lashkar, Gwalior(M.P)<br>
+							  Phone: 0751-2321943/2410420<br>
+							</address>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div style="padding-bottom:20px" class="button-print">
+			<button class="btn btn-primary btn-lg pull-right" onclick="window.print()">Print</button>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+<% include footer %>

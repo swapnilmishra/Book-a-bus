@@ -1,0 +1,54 @@
+<% include header %>
+<form class="form-inline" method="POST" action="/viewloadedluggage">
+  <div class="form-group">
+    <input type="text" class="form-control input-lg" placeholder="Loading Date" name="bookingdate">
+  </div>
+  <div class="form-group">
+    <button type="submit" class="btn btn-default btn-lg btn-primary">Go</button>
+  </div>
+</form>
+<hr>
+<table class="table table-bordered" id="luggageHistoryTbl">
+  <thead>
+    <tr>
+      <th>Select</th>
+      <th>Booking Id</th>
+      <th>Delivery From</th>
+      <th>Delivery to</th>
+      <th>Station</th>
+      <th>Parcel</th>
+      <th>Parcel Type</th>
+      <th>Date of booking</th>
+      <th>Date of loading</th>
+      <th>Bus Number</th>
+      <th>Transport charges</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+  	<% for(var i=0; i <luggages.length; i++) { %>
+	  	<tr>
+        <td><input type="checkbox" data-parcel-id="<%=luggages[i].bookingId%>"></td>
+        <td><%=luggages[i].bookingId%></td>
+	  		<td><%=luggages[i].fromName%></td>
+	  		<td><%=luggages[i].toName%></td>
+	  		<td><%=luggages[i].station%></td>
+        <td><%=luggages[i].parcel%></td>
+	  		<td><%=luggages[i].parcelType%></td>
+	  		<td><%=luggages[i].bookingDate.toDateString()%></td>
+        <td><%=luggages[i].loadingDate.toDateString()%></td>
+        <td><%=luggages[i].busNumber%></td>
+	  		<td><%=luggages[i].transportCharges%></td>
+	  		<td> 
+            <a class="btn btn-primary btn-sm" href="/seat/viewluggage/<%=luggages[i].bookingId%>">View/Print</a>
+            <button data-parcel-id="<%=luggages[i].bookingId%>" class="btn btn-danger btn-sm luggage-cancel-btn">Cancel</button>
+        </td>
+	  	</tr>
+	  <% } %>
+  </tbody>
+</table>
+<ul style="padding-bottom:20px" class="button-print list-inline">
+  <li><button class="btn btn-primary btn-lg" id="removeLoadedLuggage">Remove from loading</button></li>
+  <li><button class="btn btn-default btn-lg" onclick="window.print()">Print</button></li>
+</ul>
+<% include footer %>

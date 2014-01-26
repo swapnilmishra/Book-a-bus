@@ -1,0 +1,56 @@
+<% include header %>
+  <div class="row">
+    <div class="col-md-4">
+      <label class="control-label">Loading date</label>
+      <input type="text" class="form-control input-lg" placeholder="Select Loading Date" name="loadingdate">
+    </div>
+    <div class="col-md-4">
+        <label class="control-label">Bus Number</label>
+        <select class="form-control input-lg" name="busnumber">
+        <% for(var i=0; i < busNumbers.length; i++) { %>
+          <option value="<%=busNumbers[i]%>"><%=busNumbers[i]%></option>
+        <% } %>
+      </select>
+    </div>
+  </div>
+  <hr>
+	<table class="table table-bordered" id="luggageHistoryTbl">
+  <thead>
+    <tr>
+      <th>Select</th>
+      <th>Booking Id</th>
+      <th>Delivery From</th>
+      <th>Delivery to</th>
+      <th>Station</th>
+      <th>Parcel</th>
+      <th>Parcel Type</th>
+      <th>Date of booking</th>
+      <th>Transport charges</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+  	<% for(var i=0; i <luggages.length; i++) { %>
+	  	<tr>
+        <td><input type="checkbox" data-parcel-id="<%=luggages[i].bookingId%>"></td>
+        <td><%=luggages[i].bookingId%></td>
+        <td><%=luggages[i].fromName%></td>
+        <td><%=luggages[i].toName%></td>
+        <td><%=luggages[i].station%></td>
+        <td><%=luggages[i].parcel%></td>
+        <td><%=luggages[i].parcelType%></td>
+        <td><%=luggages[i].bookingDate.toDateString()%></td>
+        <td><%=luggages[i].transportCharges%></td>
+	  		<td> 
+          <a class="btn btn-primary btn-sm" href="/seat/viewluggage/<%=luggages[i].bookingId%>">View/Print</a>
+          <button data-parcel-id="<%=luggages[i].bookingId%>" class="btn btn-danger btn-sm luggage-cancel-btn">Cancel</button>
+        </td>
+	  	</tr>
+	  <% } %>
+  </tbody>
+</table>
+<ul style="padding-bottom:20px" class="button-print list-inline">
+  <li><button class="btn btn-primary btn-lg" id="loadBookedLuggage">Add for loading</button></li>
+  <li><button class="btn btn-default btn-lg" onclick="window.print()">Print</button></li>
+</ul>
+<% include footer %>

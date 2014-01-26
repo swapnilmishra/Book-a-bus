@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+
+  <title>Book a bus</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="/css/bootstrap.css" rel="stylesheet">
+  <link href="/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/datepicker3.css">
+
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="/js/html5shiv.js"></script>
+    <script src="/js/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+	<!-- Static navbar -->
+    <div class="navbar navbar-default navbar-static-top navbar-inverse">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">BOOK A BUS</a>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">SEAT <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="/seat/booking"><span class="glyphicon glyphicon-plus"></span> New seat booking</a></li>
+              <li class="divider"></li>
+              <li><a href="/seat/historyindex"><span class="glyphicon glyphicon-list"></span> Seat booking history</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">LUGGAGE <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="/luggage/booking"><span class="glyphicon glyphicon-plus"></span> New luggage booking</a></li>
+              <li class="divider"></li>
+              <li><a href="/luggage/bookinghistory"><span class="glyphicon glyphicon-list"></span> Booked luggage</a></li>
+              <li class="divider"></li>
+              <li><a href="/loadedluggage/index"><span class="glyphicon glyphicon-list"></span> Loaded luggage</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
